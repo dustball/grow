@@ -2,7 +2,7 @@
 After=network.target
 
 [Service]
-ExecStart=/var/www/html/service.py
+ExecStart=/var/www/html/grow-control.py
 Restart=on-failure
 RestartSec=61s
 
