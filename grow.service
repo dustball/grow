@@ -1,0 +1,10 @@
+[Unit]
+After=network.target
+
+[Service]
+ExecStart=/var/www/html/service.py
+Restart=on-failure
+RestartSec=61s
+
+[Install]
+WantedBy=default.target

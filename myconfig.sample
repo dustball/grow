@@ -1,0 +1,21 @@
+import mysql.connector
+
+def get_db():
+    return mysql.connector.connect(
+      host="localhost",
+      user="root",
+      passwd="",
+      database="grow"
+    )
+
+def get_mgkey():
+    return "123456789123456789123456789-123456789-123456789"
+    
+def get_domain():
+    return "domain.com"
+    
+def get_email():
+    return "email@email.com"
+    
+def get_pots():
+    return [[100,490],[167,338],[493,1005],[600,520],[1780,945],[1400,438]]
