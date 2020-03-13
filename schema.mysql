@@ -1,0 +1,29 @@
+CREATE TABLE `eco` (
+  `id` mediumint(9) NOT NULL AUTO_INCREMENT,
+  `dt` datetime NOT NULL,
+  `temp` float NOT NULL,
+  `rh` float NOT NULL,
+  PRIMARY KEY (`id`),
+  KEY `dt` (`dt`)
+) ENGINE=MyISAM DEFAULT CHARSET=utf8mb4;
+
+CREATE TABLE `soil` (
+  `id` mediumint(9) NOT NULL AUTO_INCREMENT,
+  `dt` datetime NOT NULL,
+  `ch` tinyint(4) NOT NULL,
+  `percent` tinyint(4) NOT NULL,
+  `batt` float NOT NULL,
+  PRIMARY KEY (`id`),
+  KEY `dt` (`dt`),
+  KEY `ch` (`ch`,`id`)
+) ENGINE=MyISAM DEFAULT CHARSET=utf8mb4;
+
+CREATE TABLE `heaters` (
+  `id` mediumint(9) NOT NULL AUTO_INCREMENT,
+  `dt` datetime NOT NULL,
+  `temp` float NOT NULL,
+  `heater` tinyint(4) NOT NULL,
+  `state` varchar(3) NOT NULL,
+  PRIMARY KEY (`id`),
+  KEY `dt` (`dt`)
+) ENGINE=MyISAM DEFAULT CHARSET=utf8mb4;
