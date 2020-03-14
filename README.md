@@ -11,14 +11,14 @@ Features:
 
 Requires:
 
-* Ecowitt GW1000 WiFi temperature/humidity probe (~$36)
-* Linux, apache, MySQL, python3
+* [Ecowitt GW1000 WiFi gateway](https://amzn.to/2x1lF4X) (~$36)
+* [Linux](https://amzn.to/2vVO5xn), apache, MySQL, python3
 
 Optional:
 
-* Wemo switches for automation (~$18)
-* IP Webcam 
-* Ecowitt soil moisture sensors (~$16)
+* [Wemo switches](https://amzn.to/2IJcKbf) for automation (~$18)
+* [IP Webcam](https://amzn.to/2vVO5xn) (~$36)
+* Ecowitt [soil moisture sensors](https://amzn.to/2Ub1jy6) (~$16)
 
 ## Installation
 
@@ -31,7 +31,7 @@ Optional:
 
 Wemo automation:
 
-1. Install ouimeaux from https://github.com/iancmcc/ouimeaux
+1. Install [ouimeaux](https://github.com/iancmcc/ouimeaux)
 2. Test command line: `wemo list`
 3. Make sure device names match those in `grow-control.py`.
 
