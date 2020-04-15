@@ -31,8 +31,8 @@ def main():
         now = datetime.now()
         hour = now.hour
             
-        high_temp = 79
-        low_temp = 76
+        high_temp = 76
+        low_temp = 73
         alarm_rh_low = 45
         alarm_rh_high = 70
         alarm_delay_minutes = 10
@@ -140,6 +140,7 @@ def make_image(temp,rh,heater1,heater2,lights,alarmed_sigma,rh_alarmed_sigma,ext
         if extra:
             text = text + "\n" + extra
         img = Image.open("image.jpg")
+        drop = Image.open("waterdrop.png") 
         draw = ImageDraw.Draw(img)
         font = ImageFont.truetype('/usr/share/fonts/truetype/dejavu/DejaVuSans.ttf', 40)
         x = 1630
@@ -156,6 +157,7 @@ def make_image(temp,rh,heater1,heater2,lights,alarmed_sigma,rh_alarmed_sigma,ext
     
         pots = get_pots()
         mycursor = mydb.cursor()
+         
     
         for i in range(1,len(pots)+1):
             sql = "select percent, batt from soil where ch="+str(i)+" order by dt desc limit 1"
@@ -168,7 +170,12 @@ def make_image(temp,rh,heater1,heater2,lights,alarmed_sigma,rh_alarmed_sigma,ext
                 height = 30
                 if x != 0:
                     draw.rectangle((x, y, x+width, y+height), fill=(0, 0, 0), outline=(255, 255, 255))
-                    draw.rectangle((x+1, y+1, x+ ((width-1)*percent/100), y+height-1), fill=(0, 200, 0))
+                    inside = (0, 200, 0)
+                    if (percent < 20):
+                        inside = (200,200,40)
+                    if (percent<10):
+                        inside = (250,0,0)
+                    draw.rectangle((x+1, y+1, x+ ((width-1)*percent/100), y+height-1), fill=inside)
                     font = ImageFont.truetype('/usr/share/fonts/truetype/dejavu/DejaVuSans.ttf', 20)
                     text = "Ch"+str(i)+" "+str(percent)+"%"
                     y = y + 36
@@ -177,6 +184,9 @@ def make_image(temp,rh,heater1,heater2,lights,alarmed_sigma,rh_alarmed_sigma,ext
                     draw.text((x, y-2), text, (0, 0, 0), font=font, align="right")
                     draw.text((x, y+2), text, (0, 0, 0), font=font, align="right")
                     draw.text((x, y), text, (255, 255, 255), font=font, align="right")
+                    
+                    img.paste(drop, (x-25, y-35 ), drop) 
+
         img.save("out.jpg")
     except e:
         print ("Error with image process = ",e)           
