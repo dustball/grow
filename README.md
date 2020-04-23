@@ -17,8 +17,10 @@ Requires:
 Optional:
 
 * [Wemo switches](https://amzn.to/2IJcKbf) for automation (~$18)
-* [IP Webcam](https://amzn.to/2vVO5xn) (~$36)
-* Ecowitt [soil moisture sensors](https://amzn.to/2Ub1jy6) (~$16)
+* [IP Webcam](https://amzn.to/2S1pjne) (~$36)
+* Ecowitt [soil moisture sensors](https://amzn.to/2Ub1jy6) (~$19)
+
+Want to help support this project? As an Amazon Associate I earn from qualifying purchases.
 
 ## Installation
 
