@@ -33,8 +33,8 @@ def main():
             
         high_temp = 76
         low_temp = 73
-        alarm_rh_low = 45
-        alarm_rh_high = 70
+        alarm_rh_low = 40
+        alarm_rh_high = 55
         alarm_delay_minutes = 10
             
         if (hour>=2 and hour<8):
@@ -43,9 +43,12 @@ def main():
             
         if (hour==2 or hour==8):
              alarm_delay_minutes = 55
-    
+                 
         alarm_temp_low = low_temp - 3
         alarm_temp_high = high_temp + 3
+
+        if (hour>=2 and hour<8):
+            alarm_temp_high = alarm_temp_high + 5
  
         heater1 = get_status("1")    
         heater2 = get_status("2")    
@@ -113,12 +116,12 @@ def main():
     
                 # If it is in between, just change one of the heaters 
                 if (temp>=low_temp and temp<=high_temp):
-                    if (temp < low_temp+1 and heater2=="off"):
-                        turn_on(temp,"2")
-                        extra = extra + "Turn on 2\n"                                                
-                    if (temp > high_temp-1 and heater2=="on"):
-                        turn_off(temp,"2")
-                        extra = extra + "Turn off 2\n"                                                
+                    if (temp < low_temp+1 and heater1=="off"):
+                        turn_on(temp,"1")
+                        extra = extra + "Turn on 1\n"                                                
+                    if (temp > high_temp-1 and heater1=="on"):
+                        turn_off(temp,"1")
+                        extra = extra + "Turn off 1\n"                                                
             else:
                 print ("Temperature too old (",old,")\n", end='')
                 extra = extra + "Sensor OOD\n"                                                
@@ -188,7 +191,7 @@ def make_image(temp,rh,heater1,heater2,lights,alarmed_sigma,rh_alarmed_sigma,ext
                     img.paste(drop, (x-25, y-35 ), drop) 
 
         img.save("out.jpg")
-    except e:
+    except Exception as e:
         print ("Error with image process = ",e)           
 
 

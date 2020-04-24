@@ -11,16 +11,18 @@ Features:
 
 Requires:
 
-* [Ecowitt GW1000 WiFi gateway](https://amzn.to/2x1lF4X) (~$36)
+* [Ecowitt GW1000 WiFi gateway](https://amzn.to/2x1lF4X) 
 * [Linux](https://amzn.to/2vVO5xn), apache, MySQL, python3
 
 Optional:
 
-* [Wemo switches](https://amzn.to/2IJcKbf) for automation (~$18)
-* [IP Webcam](https://amzn.to/2S1pjne) (~$36)
-* Ecowitt [soil moisture sensors](https://amzn.to/2Ub1jy6) (~$19)
+* [Wemo switches](https://amzn.to/2IJcKbf) for automation 
+* [IP Webcam](https://amzn.to/2S1pjne) 
+* Ecowitt [soil moisture sensors](https://amzn.to/2Ub1jy6) 
 
-Want to help support this project? As an Amazon Associate I earn from qualifying purchases.
+See my [full grow list](list.md).
+
+*As an Amazon Associate I earn from qualifying purchases.*
 
 ## Installation
 

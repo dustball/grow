@@ -17,12 +17,12 @@ mycursor = mydb.cursor()
 mycursor.execute("select id,TIMESTAMPDIFF(SECOND,dt,now()) as old,temp,rh from eco order by id desc limit 1")
 
 for (id, old, temp, rh) in mycursor:
-    if (old>200):
+    if (old>300):
         print ("Error: temp too old")
     else:
         st = os.stat("out.jpg")
         mtime = time.time() - st.st_mtime
-        if (mtime>200):
+        if (mtime>300):
             print ("Error: out.jpg too old")
         else:
             print ("OK")
