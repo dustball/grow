@@ -11,14 +11,14 @@ Features:
 
 Requires:
 
-* [Ecowitt GW1000 WiFi gateway](https://amzn.to/2x1lF4X) 
-* [Linux](https://amzn.to/2vVO5xn), apache, MySQL, python3
+* [Ecowitt GW1000 WiFi gateway](https://www.amazon.com/gp/product/B07JLRFG24?tag=grow00c0-20) 
+* [Linux](https://amzn.to/3cL3xMs), apache, MySQL, python3
 
 Optional:
 
-* [Wemo switches](https://amzn.to/2IJcKbf) for automation 
-* [IP Webcam](https://amzn.to/2S1pjne) 
-* Ecowitt [soil moisture sensors](https://amzn.to/2Ub1jy6) 
+* [Wemo switches](https://www.amazon.com/gp/product/B0776YH29B?tag=grow00c0-20) for automation 
+* [IP Webcam](https://www.amazon.com/gp/product/B0145OQTPG?tag=grow00c0-20) 
+* Ecowitt [soil moisture sensors](https://www.amazon.com/gp/product/B07JM621R3?tag=grow00c0-20) 
 
 See my [full grow list](list.md).
 
