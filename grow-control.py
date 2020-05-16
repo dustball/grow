@@ -32,7 +32,7 @@ def main():
         hour = now.hour
             
         high_temp = 76
-        low_temp = 73
+        low_temp = 72
         alarm_rh_low = 40
         alarm_rh_high = 55
         alarm_delay_minutes = 10
